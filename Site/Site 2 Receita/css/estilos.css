@@ -1,0 +1,71 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*{
+    box-sizing: border-box;
+}
+
+#bemvinda{
+    margin-right: 760px;
+    background-color: rgba(183, 183, 183, 0.315);
+    font-size: 60;
+    color: rgb(210, 56, 210);
+    font-weight: bold;
+}
+
+#titulo{
+    font-size: 35;
+    color: rgb(210, 56, 210);
+    font-weight: bold;
+}
+
+.subtitulo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 28, 142);
+}
+
+.lista{
+    font-size: 18px;
+    color: rgb(147, 79, 196);
+}
+
+#formulario{
+    font-size: 18px;
+    color: rgb(147, 79, 196);
+}
+
+.caixa{
+    /*
+    margin: 20px 820px 20px 20px;
+    padding: 20px;*/
+    width: 50%;
+    float: left;
+    
+    /* background-color: rgb(246, 134, 36); */
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/*** Para links ***/
+a{
+    color: white;
+}
+
+a:hover{
+    color: rgb(152, 74, 159);
+}
