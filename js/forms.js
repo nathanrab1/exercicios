@@ -27,7 +27,7 @@ function recolheDados(evento) {
     console.log("Olá, " + nome + " vc tem " + idade + " anos de vida." );
 
     var bemvinda = document.querySelector("#bemvinda"); 
-    var mensagem = "<p>Olá, " + nome + ",   vc tem " + idade + " anos de vida.</p>";
+    var mensagem = "<p>Olá, " + nome + ",   vc nasceu " + idade + " anos atrás.</p>";
     bemvinda.innerHTML = mensagem;
 }
 
