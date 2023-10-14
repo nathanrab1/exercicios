@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 250px;
+      height: 250px;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #3498db;
+      margin: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .circle.hovered {
+      background-color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <button id="createCirclesBtn">Create Circles</button>
+  <div class="container" id="container"></div>
+
+  <script>
+    const container = document.getElementById('container');
+    const createCirclesBtn = document.getElementById('createCirclesBtn');
+
+    createCirclesBtn.addEventListener('click', function () {
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          const circle = document.createElement('div');
+          circle.classList.add('circle');
+          circle.addEventListener('mouseover', function() {
+            circle.classList.add('hovered');
+          });
+          container.appendChild(circle);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
