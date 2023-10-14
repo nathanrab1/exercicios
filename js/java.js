@@ -21,7 +21,7 @@ const container = document.getElementById('container');
 const createCirclesBtn = document.getElementById('createCirclesBtn');
 
 createCirclesBtn.addEventListener('click', function () {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 14; j++) {
       const circle = document.createElement('div');
       circle.classList.add('circle');

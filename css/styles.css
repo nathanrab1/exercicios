@@ -30,13 +30,13 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 840px;
+  width: 400px;
   height: 0px;
 }
 
 .circle {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #3498db;
   margin: 0px;
