@@ -1,19 +1,42 @@
+#circulo {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+
+}
+
 .centralizar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#red {
+   color: white;
+  font-weight: bold;
+}
+
+#green {
+  color: white;
+  font-weight: bold;
+}
+
+#blue {
+  color: white;
+  font-weight: bold;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 1600px;
+  width: 400px;
   height: 0px;
 }
 
 .circle {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #3498db;
   margin: 0px;
