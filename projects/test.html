@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        const radius = 20;
+        const gridCount = 10;
+        const cellSize = canvas.width / gridCount;
+
+        function drawCircle(x, y, color) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = color;
+            ctx.fill();
+        }
+
+        function drawGrid() {
+            for (let i = 0; i < gridCount; i++) {
+                for (let j = 0; j < gridCount; j++) {
+                    const posX = i * cellSize + cellSize / 2;
+                    const posY = j * cellSize + cellSize / 2;
+                    drawCircle(posX, posY, 'blue');
+                }
+            }
+        }
+
+        function getMousePos(canvas, evt) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: evt.clientX - rect.left,
+                y: evt.clientY - rect.top
+            };
+        }
+
+        canvas.addEventListener('mousemove', function (evt) {
+            const mousePos = getMousePos(canvas, evt);
+            const cellX = Math.floor(mousePos.x / cellSize);
+            const cellY = Math.floor(mousePos.y / cellSize);
+            const posX = cellX * cellSize + cellSize / 2;
+            const posY = cellY * cellSize + cellSize / 2;
+            const distance = Math.sqrt((mousePos.x - posX) ** 2 + (mousePos.y - posY) ** 2);
+
+            if (distance <= radius) {
+                const gradient = ctx.createRadialGradient(posX, posY, 0, posX, posY, radius);
+                gradient.addColorStop(0, 'blue');
+                gradient.addColorStop(1, 'red');
+                drawCircle(posX, posY, gradient);
+            } else {
+                drawGrid();
+            }
+        });
+
+        drawGrid();
+    </script>
+</body>
+
+</html>

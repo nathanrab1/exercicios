@@ -52,8 +52,10 @@ function generateColor() {
 }
 
 function setSize() {
-  canvas.height = innerHeight;
-  canvas.width = innerWidth;
+
+    
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
 }
 
 function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
