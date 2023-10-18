@@ -73,3 +73,39 @@ button:hover {
 canvas{
     border: 1px solid black;
 }
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+.paragrafo {
+    padding: 0px 80px;
+    text-align: center;
+}
+
+.fotos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 60px;
+
+}
+
+.bloco {
+    width: 100px;
+        justify-content: center;
+        text-align: center;
+}

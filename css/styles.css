@@ -23,8 +23,3 @@
 .circle.hovered {
   background-color: #338cc7;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-}
